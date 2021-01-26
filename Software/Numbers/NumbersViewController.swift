@@ -24,6 +24,11 @@ class NumbersViewController: UIViewController {
         setupNavigationBar()
         loadFibonacciData()
     }
+}
+
+// MARK: - Load Fibonacci, Simple Data
+
+extension NumbersViewController {
     
     private func loadFibonacciData(){
         isLoading = false
@@ -77,6 +82,12 @@ extension NumbersViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         let cellViewModel = viewModel.cellViewModel(forIndexPath: indexPath)
         tableViewCell.viewModel = cellViewModel
+        
+        if indexPath.item % 4 == 1 || indexPath.item % 4 == 2 {
+            cell!.backgroundColor = .cellWhiteColor()
+        } else {
+            cell!.backgroundColor = .cellGrayColor()
+        }
 
         return tableViewCell
     }
