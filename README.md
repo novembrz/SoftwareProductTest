@@ -10,4 +10,4 @@
 • Переключение списка «простые/фибоначчи» можно сделать как угодно
 
 ### Использовано:
-Верстка кодом, UISegmentedControll - переключение списка, UICollectionView, MVVM архитектура
+Верстка кодом, UISegmentedControll - переключение списка, UICollectionView, библиотека BigInt, MVVM архитектура, CocoaPods
