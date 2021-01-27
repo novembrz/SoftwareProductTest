@@ -102,7 +102,7 @@ extension NumbersViewController: UICollectionViewDelegate, UICollectionViewDataS
     // Устанавливаем время, когда мы хотим, чтобы при прокрутке загружалось больше данных => загрузит больше данных, когда пользователь увидит 20ю ячейку снизу.
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.item == (viewModel?.numberOfRows())! - 20 && !self.isLoading {
+        if indexPath.item == (viewModel?.numberOfRows())! - 2 && !self.isLoading {
             loadMoreData()
         }
     }
