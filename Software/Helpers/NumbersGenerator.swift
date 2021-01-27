@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import BigInt
 
 struct NumbersGenerator {
     
-    static func getFibonacci(array: [Int], completion: (Int) -> ()){
+    static func getFibonacci(array: [BigInt], completion: (BigInt) -> ()){
         let preLast = array[array.count - 2]
         let last = array[array.count - 1]
         
@@ -17,14 +18,14 @@ struct NumbersGenerator {
         completion(newNumber)
     }
     
-    static func getSimple(el: Int, completion: (Int) -> ()) {
+    static func getSimple(el: BigInt, completion: (BigInt) -> ()) {
         if isPrime(el) {
             completion(el)
         }
     }
     
-    static func isPrime(_ num: Int) -> Bool {
-        let max = Int(floor(sqrt(Double(num))))
+    static func isPrime(_ num: BigInt) -> Bool {
+        let max = BigInt(floor(sqrt(Double(num))))
         guard max >= 2 else { return true }
 
         for factor in 2...max {

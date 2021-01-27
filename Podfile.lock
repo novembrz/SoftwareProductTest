@@ -1,0 +1,16 @@
+PODS:
+  - BigInt (5.2.0)
+
+DEPENDENCIES:
+  - BigInt (~> 5.0)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BigInt
+
+SPEC CHECKSUMS:
+  BigInt: f668a80089607f521586bbe29513d708491ef2f7
+
+PODFILE CHECKSUM: 9199fe9aec07a086ddd9ee9d048635c18c7e024e
+
+COCOAPODS: 1.10.0

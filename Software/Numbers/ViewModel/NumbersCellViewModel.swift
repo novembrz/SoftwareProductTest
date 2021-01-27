@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import BigInt
 
 class NumbersCellViewModel: NumbersCellViewModelType {
-    var number: Int
+    var number: BigInt
     
-    init(number: Int) {
+    init(number: BigInt) {
         self.number = number
     }
 }

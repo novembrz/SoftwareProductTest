@@ -15,6 +15,7 @@ class NumbersCell: UICollectionViewCell {
         willSet(viewModel) {
             guard let viewModel = viewModel else { return }
             numberLabel.text = String(viewModel.number)
+            print(viewModel.number)
         }
     }
     

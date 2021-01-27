@@ -24,6 +24,11 @@ class NumbersViewController: UIViewController {
         setupNavigationBar()
         loadFibonacciData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        segmentAction()
+    }
 }
 
 // MARK: - Load Fibonacci, Simple Data

@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import BigInt
 
 class NumbersViewModel: TableViewViewModelType {
     
-    var numbersArray: [Int] = []
+    var numbersArray: [BigInt] = []
     
     //MARK: - Fibonacci Numbers Methods
     
-    func loadFibonacciData(min:Int, max: Int, completion: @escaping() -> ()) {
+    func loadFibonacciData(min: BigInt, max: BigInt, completion: @escaping() -> ()) {
         numbersArray = [1, 2]
         for _ in min...max {
             NumbersGenerator.getFibonacci(array: numbersArray) { [weak self] number in
@@ -27,7 +28,7 @@ class NumbersViewModel: TableViewViewModelType {
         let startFib = self.numbersArray.count
         let endFib = startFib + 20
         
-        for _ in startFib...endFib where endFib < 100 {
+        for _ in startFib...endFib {
             NumbersGenerator.getFibonacci(array: numbersArray) { [weak self] number in
                 self?.numbersArray.append(number)
                 completion()
@@ -37,7 +38,7 @@ class NumbersViewModel: TableViewViewModelType {
     
     //MARK: - Simple Numbers Methods
     
-    func loadSimpleData(min:Int, max: Int, completion: @escaping() -> ()) {
+    func loadSimpleData(min: BigInt, max: BigInt, completion: @escaping() -> ()) {
         numbersArray = []
         for el in min...max {
             NumbersGenerator.getSimple(el: el) { [weak self] number in

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BigInt
 
 protocol TableViewViewModelType {
     func numberOfRows() -> Int
@@ -13,5 +14,5 @@ protocol TableViewViewModelType {
 }
 
 protocol NumbersCellViewModelType: class {
-    var number: Int { get }
+    var number: BigInt { get }
 }
